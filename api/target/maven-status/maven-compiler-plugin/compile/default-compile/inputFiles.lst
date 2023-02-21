@@ -1,0 +1,6 @@
+/home/hurricane/workspace/fhirresource/api/src/main/java/org/openmrs/module/fhirresource/FhirresourceActivator.java
+/home/hurricane/workspace/fhirresource/api/src/main/java/org/openmrs/module/fhirresource/api/dao/FhirresourceDao.java
+/home/hurricane/workspace/fhirresource/api/src/main/java/org/openmrs/module/fhirresource/api/impl/FhirresourceServiceImpl.java
+/home/hurricane/workspace/fhirresource/api/src/main/java/org/openmrs/module/fhirresource/FhirresourceConfig.java
+/home/hurricane/workspace/fhirresource/api/src/main/java/org/openmrs/module/fhirresource/Item.java
+/home/hurricane/workspace/fhirresource/api/src/main/java/org/openmrs/module/fhirresource/api/FhirresourceService.java

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+ 
+    <!--
+    	See http://wiki.openmrs.org/display/docs/Module+liquibase+File for 
+    	documentation on this file.
+    
+        See http://www.liquibase.org/manual/home#available_database_refactorings
+        for a list of supported elements and attributes
+    -->
+ 
+ 	<!-- Uncomment the changeset below if you want to make the Item class persistable, see also Item and FhirresourceDaoTest -->
+ 	<!--
+	<changeSet id="fhirresource-2016-08-02-12-21" author="raff">
+		<preConditions onFail="MARK_RAN">
+			<not><tableExists tableName="fhirresource_item"/></not>
+		</preConditions>
+		<comment>
+			Creating the fhirresource_item table
+		</comment>
+		<createTable tableName="fhirresource_item">
+			<column name="fhirresource_item_id" type="int" autoIncrement="true">
+				<constraints primaryKey="true" nullable="false"/>
+			</column>
+			<column name="uuid" type="char(38)">
+				<constraints nullable="false" unique="true"></constraints>
+			</column>
+			<column name="owner" type="int" />
+			<column name="description" type="varchar(255)" />
+		</createTable>
+        <addForeignKeyConstraint constraintName="fhirresource_item_owner_fk" baseTableName="fhirresource_item" baseColumnNames="owner"  referencedTableName="users"
+                                 referencedColumnNames="user_id" />
+    </changeSet> -->
+    <changeSet id="1" author="oguz">
+        <preConditions onFail="MARK_RAN">
+            <not><tableExists tableName="fhirresource_schedule"/></not>
+        </preConditions>
+        <comment>
+            Creating the fhirresource_schedule table
+        </comment>
+        <createTable tableName="fhirresource_schedule">
+            <column name="fhirresource_schedule_id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="fhirresource_schedule_identifier" type="varchar(128)">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="fhirresource_schedule_active" type="BOOLEAN">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="fhirresource_schedule_service_category" type="varchar(128)">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="fhirresource_schedule_service_type" type="varchar(128)">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="fhirresource_schedule_specialty" type="varchar(128)">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="fhirresource_schedule_actor" type="varchar(128)">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="fhirresource_schedule_planning_horizon" type="varchar(128)">
+                <constraints nullable="false" unique="true" />
+            </column>
+            <column name="fhirresource_schedule_comment" type="varchar(255)">
+                <constraints nullable="false" unique="true" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

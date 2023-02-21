@@ -1,0 +1,6 @@
+org/openmrs/module/fhirresource/Item.class
+org/openmrs/module/fhirresource/api/FhirresourceService.class
+org/openmrs/module/fhirresource/FhirresourceConfig.class
+org/openmrs/module/fhirresource/api/impl/FhirresourceServiceImpl.class
+org/openmrs/module/fhirresource/FhirresourceActivator.class
+org/openmrs/module/fhirresource/api/dao/FhirresourceDao.class

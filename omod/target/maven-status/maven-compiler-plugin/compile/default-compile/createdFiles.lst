@@ -1,0 +1,2 @@
+org/openmrs/module/fhirresource/extension/html/AdminList.class
+org/openmrs/module/fhirresource/web/controller/FhirresourceController.class
